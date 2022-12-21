@@ -1,0 +1,141 @@
+{
+  "name": "sig/eco21-pa",
+  "description": "SIG éco21 plans d'actions",
+  "license": "proprietary",
+  "type": "project",
+  "version": "7.29.0",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/",
+      "Idlab\\": "src/Idlab/",
+      "Sig\\": "src/Sig/",
+      "Application\\": "src/Application/"
+    },
+    "classmap": [
+      {
+        "App\\Kernel": "src/Kernel.php"
+      }
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Tests\\": "tests"
+    }
+  },
+  "require": {
+    "php": ">=7.4",
+    "ext-json": "*",
+    "amphp/http-client": "^4.5",
+    "beberlei/doctrineextensions": "^1.2",
+    "doctrine/common": "^2.8",
+    "doctrine/doctrine-bundle": "^2.2",
+    "doctrine/doctrine-cache-bundle": "^1.3",
+    "doctrine/doctrine-migrations-bundle": "^3.0",
+    "doctrine/migrations": "^3.0",
+    "doctrine/orm": "^2.6",
+    "easycorp/easyadmin-bundle": "^3.2",
+    "eightpoints/guzzle-bundle": "^8.2",
+    "friendsofsymfony/rest-bundle": "^3.0",
+    "friendsofsymfony/user-bundle": "^2.1",
+    "fzaninotto/faker": "^1.8",
+    "guzzlehttp/guzzle": "^7.2",
+    "imagine/imagine": "^0.7",
+    "jms/serializer-bundle": "^3.7",
+    "knplabs/knp-menu-bundle": "^3.0",
+    "knplabs/knp-snappy-bundle": "^1.5",
+    "lexik/jwt-authentication-bundle": "^2.14",
+    "nelmio/api-doc-bundle": "^3.2",
+    "nelmio/cors-bundle": "^1.5",
+    "nitmedia/wkhtml2pdf": "^2.1",
+    "pagerfanta/pagerfanta": "^2.0",
+    "phpoffice/phpspreadsheet": "1.16",
+    "phpstan/phpdoc-parser": "^1.2",
+    "sensio/framework-extra-bundle": "^5.2",
+    "sentry/sentry-symfony": "^3.3",
+    "sig/jws-auth-bundle": "^2.0",
+    "sonata-project/admin-bundle": "^3.86",
+    "sonata-project/block-bundle": "^4.5",
+    "sonata-project/doctrine-extensions": "^1.11",
+    "sonata-project/doctrine-orm-admin-bundle": "^3.26",
+    "sonata-project/easy-extends-bundle": "^2.5",
+    "sonata-project/form-extensions": "^1.8",
+    "sonata-project/twig-extensions": "^1.5",
+    "sonata-project/user-bundle": "^4.3",
+    "soundasleep/html2text": "^0.5.0",
+    "stof/doctrine-extensions-bundle": "^1.5",
+    "symfony/flex": "^1.11",
+    "symfony/form": "^4.4",
+    "symfony/http-client": "4.4.*",
+    "symfony/mailer": "^4.4",
+    "symfony/monolog-bundle": "^3.6",
+    "symfony/polyfill-apcu": "^1.9",
+    "symfony/security-bundle": "^4.4",
+    "symfony/serializer": "4.4.*",
+    "symfony/swiftmailer-bundle": "^3.2",
+    "symfony/templating": "^v4.4",
+    "symfony/translation": "^4.4",
+    "symfony/validator": "^4.4",
+    "symfony/workflow": "4.4.*",
+    "symfony/yaml": "4.4.*",
+    "szymach/c-pchart": "^3.0",
+    "twig/extensions": "^1.5",
+    "twig/intl-extra": "^3.3",
+    "twig/twig": "^1.0||^2.0",
+    "zendframework/zend-validator": "^2.10"
+  },
+  "conflict": {
+    "symfony/symfony": "*"
+  },
+  "require-dev": {
+    "davidrjonas/composer-lock-diff": "^1.5",
+    "doctrine/doctrine-fixtures-bundle": "^3.4",
+    "friendsofphp/php-cs-fixer": "^2.16",
+    "hautelook/alice-bundle": "^2.9",
+    "phpstan/extension-installer": "^1.2",
+    "phpstan/phpstan": "^1.9",
+    "phpstan/phpstan-beberlei-assert": "^1.0",
+    "phpstan/phpstan-doctrine": "^1.3",
+    "phpstan/phpstan-symfony": "^1.2",
+    "phpunit/phpunit": "^9.5",
+    "rector/rector": "^0.15.0",
+    "symfony/browser-kit": "^4.4",
+    "symfony/css-selector": "^4.4",
+    "symfony/dotenv": "^5.2",
+    "symfony/maker-bundle": "^1.27",
+    "symfony/phpunit-bridge": "^5.1",
+    "symfony/stopwatch": "^4.4",
+    "symfony/twig-bundle": "^4.4",
+    "symfony/web-profiler-bundle": "^5.0"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "@auto-scripts"
+    ],
+    "post-update-cmd": [
+      "@auto-scripts"
+    ],
+    "auto-scripts": {
+      "app:hard-clear-cache": "symfony-cmd",
+      "assets:install %PUBLIC_DIR% --symlink": "symfony-cmd"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "symfony/flex": true,
+      "phpstan/extension-installer": true
+    }
+  },
+  "extra": {
+    "symfony": {
+      "require": "4.4.*"
+    }
+  },
+  "repositories": {
+    "idlab": {
+      "type": "vcs",
+      "url": "git@gitlab.com:idlab-geneva/sig/misc/idlab-jws-auth-bundle.git"
+    }
+  }
+}
